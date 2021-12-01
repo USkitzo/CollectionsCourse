@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aerus\\Documents\\github\\Collections\\CollectionsCourse\\Collections\\Collections.csproj": {}
+    "M:\\CollectionsCourse\\Collections\\Collections.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aerus\\Documents\\github\\Collections\\CollectionsCourse\\Collections\\Collections.csproj": {
+    "M:\\CollectionsCourse\\Collections\\Collections.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aerus\\Documents\\github\\Collections\\CollectionsCourse\\Collections\\Collections.csproj",
+        "projectUniqueName": "M:\\CollectionsCourse\\Collections\\Collections.csproj",
         "projectName": "Collections",
-        "projectPath": "C:\\Users\\aerus\\Documents\\github\\Collections\\CollectionsCourse\\Collections\\Collections.csproj",
+        "projectPath": "M:\\CollectionsCourse\\Collections\\Collections.csproj",
         "packagesPath": "C:\\Users\\aerus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aerus\\Documents\\github\\Collections\\CollectionsCourse\\Collections\\obj\\",
+        "outputPath": "M:\\CollectionsCourse\\Collections\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\aerus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

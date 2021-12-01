@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Collections
 {
@@ -189,13 +190,131 @@ namespace Collections
 
         }
 
+        static void Dictionary()
+        {
+            string peopleToFind = "Martin";
+
+            var d = new Dictionary<string, string>();
+            d.Add("Jean", "0622443366");
+            d.Add("Marie", "0622883377");
+            d["Martin"] = "0658794425";
+
+            if (d.ContainsKey(peopleToFind))
+            {
+                Console.WriteLine(d[peopleToFind]);
+            }
+            else
+            {
+                Console.WriteLine("Cette personne n'existe pas");
+            }
+
+            var l = new List<string[]>();
+            l.Add(new string[] { "Jean", "0622443366" });
+            l.Add(new string[] { "Marie", "0622883377" });
+            l.Add(new string[] { "Martin", "0658794425" });
+            l.Add(new string[] { "Toto", "0666666666" });
+
+            for (int i = 0; i < l.Count; i++)
+            {
+                if(l[i][0] == peopleToFind)
+                {
+                    Console.WriteLine(l[i][1]);
+                    break;
+                }
+            }
+        }
+
+        static void ForEachLoop()
+        {
+            //var noms = new string[] { "Toto", "Jean", "Pierre" };
+            //var noms = new List<string>() { "Toto", "Jean", "Pierre" };
+            /*for (int i = 0; i < noms.Length; i++)
+            {
+                Console.WriteLine(noms[i]);
+            }*/
+            /*foreach (var nom in noms)
+            {
+                Console.WriteLine(nom);
+            }*/
+
+            var d = new Dictionary<string, string>();
+            d.Add("Jean", "0622443366");
+            d.Add("Marie", "0622883377");
+            d["Martin"] = "0658794425";
+
+            foreach (var e in d)
+            {
+                Console.WriteLine($"{e.Key} - {e.Value}");
+            }
+        }
+
+        static void TrisAndLinq()
+        {
+            /*var noms = new List<string> { "Toto", "Jean", "Pierre", "Emilie", "Benoit", "Alexis", "Charlotte", "Thierry" };
+
+            //noms.Sort();
+            //Array.Sort(noms);
+            //noms = noms.OrderBy(nom => nom).ToList();
+            noms = noms.Where(nom => nom[nom.Length-1] != 'e').ToList();
+
+            foreach (var nom in noms)
+            {
+                Console.WriteLine(nom);
+            }*/
+
+            var notes = new List<int> { 4, 8, 9, 7, 6};
+            //notes = notes.OrderBy(n => n).ToList();
+            notes = notes.Where(x => x >= 5).ToList();
+            foreach (var note in notes)
+            {
+                Console.WriteLine(note);
+            }
+        }
+
+        static void MaFonction(out int p)
+        {
+            p = 10;
+        }
+
+        static void MaFonction2(List<int> p)
+        {
+            p[0] = 10;
+        }
+
+        static void PassageValeurOuRef()
+        {
+            //int a = 5;
+            //MaFonction(out a);
+
+            //int num = int.Parse("15");
+            int num = 0;
+            if(int.TryParse("1u", out num))
+            {
+                Console.WriteLine("Conversion OK");
+            }
+            else
+            {
+                Console.WriteLine("Problème de conversion");
+            }
+
+
+            //var l = new List<int> { 5};
+            //MaFonction2(l);
+
+            //Console.WriteLine(l[0]);
+            Console.WriteLine(num);
+        }
 
         static void Main(string[] args)
         {
             //Arrays();
             //Lists();
             //ArrayList();
-            ListOfLists();
+            //ListOfLists();
+            //Dictionary();
+            //ForEachLoop();
+            //TrisAndLinq();
+            PassageValeurOuRef();
         }
     }
 }
