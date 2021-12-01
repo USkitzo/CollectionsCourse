@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aerus\\source\\repos\\Collections\\Collections\\Collections\\Collections.csproj",
+      "projectUniqueName": "C:\\Users\\aerus\\Documents\\github\\Collections\\CollectionsCourse\\Collections\\Collections.csproj",
       "projectName": "Collections",
-      "projectPath": "C:\\Users\\aerus\\source\\repos\\Collections\\Collections\\Collections\\Collections.csproj",
+      "projectPath": "C:\\Users\\aerus\\Documents\\github\\Collections\\CollectionsCourse\\Collections\\Collections.csproj",
       "packagesPath": "C:\\Users\\aerus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aerus\\source\\repos\\Collections\\Collections\\Collections\\obj\\",
+      "outputPath": "C:\\Users\\aerus\\Documents\\github\\Collections\\CollectionsCourse\\Collections\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\aerus\\AppData\\Roaming\\NuGet\\NuGet.Config",

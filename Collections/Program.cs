@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace Collections
@@ -71,29 +72,130 @@ namespace Collections
             ShowMinValue(t);
         }
 
-        static void ShowList(List<int> list)
+        static void ShowList(List<string> list, bool decreasedOrder = false)
         {
+            if (!decreasedOrder)
+            {
+                for (int i = 0; i < list.Count; i++)
+                {
+                    Console.WriteLine(list[i]);
+                }
+            }
+            else
+            {
+                for (int i = list.Count-1; i >= 0; i--)
+                {
+                    Console.WriteLine(list[i]);
+                }
+            }
+
+            string longestName = "";
             for (int i = 0; i < list.Count; i++)
             {
-                Console.WriteLine($"{list[i]}");
+                string name = list[i];
+                if (name.Length > longestName.Length)
+                {
+                    longestName = name;
+                }
             }
+            Console.WriteLine($"Le nom le plus grand est : {longestName}");
         }
 
         static void Lists()
         {
-            List<int> list = new List<int>();
+            /*
+            var names = new List<string>();
+            
 
-            list.Add(2);
-            list.Add(8);
-            list.Add(15);
+            while (true)
+            {
+                Console.Write("Rentrez un nom (ENTER pour finir : )");
+                string name = Console.ReadLine();
 
-            ShowList(list);
+                if(name == "")
+                {
+                    break;
+                }
+
+                if (names.Contains(name))
+                {
+                    Console.WriteLine("Erreur, ce nom est déjà dans la liste.");
+                    Console.WriteLine();
+                }
+                else
+                {
+                    names.Add(name);
+                }
+            }
+
+            //list.Add(2);
+            //list.Add(8);
+            //list.Add(15);
+
+            for (int i = names.Count - 1; i >= 0; i--)
+            {
+                if (names[i].EndsWith('e'))
+                {
+                    names.RemoveAt(i);
+                }
+            }
+
+            ShowList(names, false);
+
+            */
+
+            var list1 = new List<string>() { "Paul", "Jean", "Pierre", "Emilie", "Martin" };
+            var list2 = new List<string>() { "Sophie", "Jean", "Toto", "Martin" };
+
+            ShowCommuneElements(list1, list2);
+
+            
         }
+        static void ShowCommuneElements(List<string> l1, List<string> l2)
+        {
+            for (int i = 0; i < l1.Count; i++)
+            {
+                string name1 = l1[i];
+                if (l2.Contains(name1))
+                {
+                    Console.WriteLine(name1);
+                }
+            }
+        }
+
+        static void ArrayList()
+        {
+            ArrayList a = new ArrayList();
+
+        }
+
+        static void ListOfLists()
+        {
+            var pays = new List<List<string>>();
+
+            pays.Add(new List<string> { "France", "Rennes", "Paris", "Strasbourg" });
+            pays.Add(new List<string> { "Espagne", "Madrid", "Barcelone", "Alicante" });
+            pays.Add(new List<string> { "Allemagne", "Munich", "Berlin", "Breme" });
+            
+            for (int i = 0; i < pays.Count; i++)
+            {
+                var p = pays[i];
+                Console.WriteLine($"{p[0]} - {p.Count-1} villes");
+                for (int j = 1; j < p.Count; j++)
+                {
+                    Console.WriteLine($"  {p[j]}");
+                }
+            }
+
+        }
+
 
         static void Main(string[] args)
         {
             //Arrays();
-            Lists();
+            //Lists();
+            //ArrayList();
+            ListOfLists();
         }
     }
 }
